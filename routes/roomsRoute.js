@@ -7,7 +7,6 @@ router.get("/getallrooms", async (req, res) => {
   try {
     const rooms = await Room.find({});
     res.send(rooms);
-    res.status(200).json({ message: "tsg api" });
   } catch (error) {
     return res.status(400).json({ message: error });
   }
